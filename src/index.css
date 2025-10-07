@@ -1,0 +1,104 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Almond Beige backgrounds - warm and inviting */
+    --background: 34 55% 85%;
+    --foreground: 151 21% 23%;
+
+    /* Card styling - soft beige with green text */
+    --card: 34 60% 88%;
+    --card-foreground: 151 21% 23%;
+
+    /* Popover styling */
+    --popover: 34 60% 88%;
+    --popover-foreground: 151 21% 23%;
+
+    /* Dark Mild Green primary - main brand color */
+    --primary: 151 21% 23%;
+    --primary-foreground: 34 55% 85%;
+
+    /* Secondary tones - lighter green */
+    --secondary: 151 15% 45%;
+    --secondary-foreground: 34 55% 85%;
+
+    /* Muted tones for subtle elements */
+    --muted: 34 40% 75%;
+    --muted-foreground: 151 15% 35%;
+
+    /* Accent - slightly darker beige for emphasis */
+    --accent: 34 45% 70%;
+    --accent-foreground: 151 21% 23%;
+
+    /* Destructive colors for errors */
+    --destructive: 0 70% 50%;
+    --destructive-foreground: 34 55% 85%;
+
+    /* Border and input - soft neutral */
+    --border: 34 30% 70%;
+    --input: 34 40% 90%;
+    --ring: 151 21% 23%;
+
+    /* Rounded corners for modern feel */
+    --radius: 0.75rem;
+
+    /* Shadows with green tint */
+    --shadow-sm: 0 1px 2px 0 hsl(151 21% 23% / 0.05);
+    --shadow: 0 4px 6px -1px hsl(151 21% 23% / 0.08);
+    --shadow-lg: 0 10px 15px -3px hsl(151 21% 23% / 0.12);
+    --shadow-xl: 0 20px 25px -5px hsl(151 21% 23% / 0.15);
+
+    /* Gradients for backgrounds */
+    --gradient-primary: linear-gradient(135deg, hsl(34 55% 85%), hsl(34 60% 90%));
+    --gradient-card: linear-gradient(to bottom, hsl(34 60% 88%), hsl(34 55% 85%));
+    
+    /* Transitions */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .dark {
+    --background: 151 25% 15%;
+    --foreground: 34 55% 85%;
+
+    --card: 151 20% 18%;
+    --card-foreground: 34 55% 85%;
+
+    --popover: 151 20% 18%;
+    --popover-foreground: 34 55% 85%;
+
+    --primary: 34 55% 85%;
+    --primary-foreground: 151 21% 23%;
+
+    --secondary: 151 15% 30%;
+    --secondary-foreground: 34 55% 85%;
+
+    --muted: 151 10% 25%;
+    --muted-foreground: 34 40% 65%;
+
+    --accent: 151 15% 35%;
+    --accent-foreground: 34 55% 85%;
+
+    --destructive: 0 60% 45%;
+    --destructive-foreground: 34 55% 85%;
+
+    --border: 151 10% 25%;
+    --input: 151 10% 25%;
+    --ring: 34 55% 85%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
